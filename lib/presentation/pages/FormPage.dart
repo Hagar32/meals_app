@@ -39,7 +39,7 @@ controller: name,
     SizedBox(width: 16,height: 16,),
     TextFormField(
       validator: ( value){
-        if(value!.isEmpty && !value.contains('@') && !value.endsWith('.com')&& value.length<5){
+        if(value!.isEmpty || !value.contains('@') || !value.endsWith('.com') || value.length<5){
           return ' invalid Email';
 
        }
